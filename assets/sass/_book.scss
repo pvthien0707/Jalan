@@ -1,0 +1,79 @@
+.book {
+    padding: 18rem 0 16rem;
+    background-color: $light-blue-2-color;
+    border-radius: 20px;
+    margin-bottom: 17.5rem;
+    &-container {
+        max-width: 96rem;
+        margin: 0 auto;
+    }
+    &-heading {
+        text-align: center;
+        margin-bottom: 7.5rem;
+    }
+    &-form {
+        background-color: $white-color;
+        border-radius: 12px;
+        padding: 2.5rem;
+        display: grid;
+        grid-template-columns:  1fr 1fr 10rem;
+        grid-gap: 25px;
+        &__destination {
+            height: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: $gray-color;
+            border-radius: inherit;
+            padding: 0 3rem;
+            &-input {
+                font-size: 2rem;
+                background-color: transparent;
+            }
+            i {
+                font-size: 2.5rem;
+                color: $primary-color;
+            }
+            
+        }
+        &__dropdown {
+            height: 10rem;
+            background-color: $gray-color;
+            border-radius: inherit;
+            position: relative;
+            &-select {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 3rem;
+                &-value {
+                    font-size: 2rem;
+                }
+                i {
+                    font-size: 2.5rem;
+                    color: $primary-color;
+                }
+            }
+            &-list {
+                display: none;
+            }
+           
+        }
+    }
+    @include maxWidth(767px) {
+        padding: 8rem 0 6rem;
+        margin-bottom: 10rem;
+        &-heading {
+            margin-bottom: 5rem;
+        }
+        &-form {
+            grid-template-columns: 1fr;
+            &__btn {
+                width: 100%;
+                font-size: 3rem;
+            }
+        }
+       
+    }
+}
